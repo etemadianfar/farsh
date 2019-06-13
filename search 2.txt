@@ -1,0 +1,56 @@
+int id = view.getId();
+        switch (id){
+            case R.id.add_b:
+                Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+                photoPickerIntent.setType("image/*");
+                startActivityForResult(photoPickerIntent, 1);
+                break;
+
+            case R.id.select_b:
+                Intent photoPickerIntent2 = new Intent(Intent.ACTION_PICK);
+                photoPickerIntent2.setType("image/*");
+                startActivityForResult(photoPickerIntent2, 2);
+                break;
+
+            case R.id.search_b:
+                values[] vals = new values[carpets.size()];
+                int v;
+                int k=0;
+                int[] a = new int[1200];
+                int[] b = new int[1200];
+
+                for(int h=0; h<=299 ; h++){
+                    a[h] = main_carpet.getPixel(h,10);
+                }
+                for(int h=300; h<=599 ; h++){
+                    a[h] = main_carpet.getPixel(h-300,100);
+                }
+                for(int h=600; h<=899 ; h++){
+                    a[h] = main_carpet.getPixel(h-600,200);
+                }
+                for(int h=900; h<1200 ; h++){
+                    a[h] = main_carpet.getPixel(h-900,300);
+                }
+
+                for(int i=0; i<carpets.size(); i++){
+                    for(int h=0; h<300 ; h++) b[h] = carpets.elementAt(i).getPixel(h,10);
+                    for(int h=300; h<=599 ; h++) b[h] = carpets.elementAt(i).getPixel(h-300,100);
+                    for(int h=600; h<=899 ; h++) b[h] = carpets.elementAt(i).getPixel(h-600,200);
+                    for(int h=900; h<1200 ; h++) b[h] = carpets.elementAt(i).getPixel(h-900,300);
+
+                    v = getMinimumPenalty(a, b, 3,2);
+                    vals[k++] = new values(i,v);
+                }
+
+                sort(vals,0,carpets.size()-1);
+
+                int index = vals[2].index;
+                first.setImageBitmap(carpets.elementAt(index));
+
+                index = vals[1].index;
+                second.setImageBitmap(carpets.elementAt(index));
+
+                index = vals[0].index;
+                third.setImageBitmap(carpets.elementAt(index));
+
+                break;
