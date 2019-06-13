@@ -1,0 +1,41 @@
+List<attr_carpet> finall = new ArrayList<>();
+
+                String mAx = "0";
+                if(String.valueOf(cash.getText()) != "")
+                    mAx = String.valueOf(cash.getText());
+
+                singleton temp_si = singleton.getInstance();
+                int m = temp_si.count;
+                attr_carpet[] Carpets = temp_si.finall;
+
+                for (int i = 0; i < m - 1; i++) {
+                    int min_idx = i;
+                    for (int j = i + 1; j < m; j++)
+                        if (Integer.valueOf(Carpets[j].att_value) < Integer.valueOf(Carpets[min_idx].att_value))
+                            min_idx = j;
+
+                    attr_carpet temp = Carpets[min_idx];
+                    Carpets[min_idx] = Carpets[i];
+                    Carpets[i] = temp;
+                }
+
+                for(int i=0 ; i<m ; i++)
+                    finall.add(Carpets[i]);
+
+                int max2;
+
+                try{
+                    max2 = Integer.valueOf(mAx);
+                }catch(NumberFormatException ex){
+                    max2 =0;
+                }
+
+                List<attr_carpet> finalll = new ArrayList<>();
+
+                int counter=0;
+                while(max2>0){
+                    if(Integer.valueOf(finall.get(counter).att_value) <= max2){
+                        finalll.add(finall.get(counter));
+                        max2 -= Integer.valueOf(finall.get(counter++).att_value);
+                    }else break;
+                }
