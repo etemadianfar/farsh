@@ -1,0 +1,33 @@
+vertex_color = new String[row];
+                Graph g1 = new Graph(row);
+                for(int i=0; i<row; i++){
+                    for(int j=i ; j<row ; j++){
+                        if(input_matrix[i][j] == 1)
+                            g1.addEdge(i, j);
+                    }
+                }
+                int[] result = g1.greedyColoring();
+
+                vertex_list_adapter my_adaptor;
+                my_adaptor = new vertex_list_adapter(context,R.layout.custom_spinner,vertex_color);
+                colors.setAdapter(my_adaptor);
+
+                Arrays.sort(result);
+
+                int m=0;
+
+                for(int i=0; i<vertex_color.length ; i++){
+
+                    if(i != vertex_color.length -1){
+                        if(result[i] == result[i+1]) {
+                            result[i + 1] = 20;
+                            i=0;
+                        }
+                    }
+                }
+
+                for (int i=0 ;i<vertex_color.length;i++)
+                    if(result[i] != 20) m++;
+
+                colornum.setText(String.valueOf(m));
+            }
