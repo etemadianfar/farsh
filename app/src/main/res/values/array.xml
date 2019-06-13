@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="branches">
+        <item>خیابان علامه</item>
+        <item>خیابان شهید کلاهدوز</item>
+        <item>خیابان کیانمهر</item>
+    </string-array>
+
+    <string-array name="origin">
+        <item>شهدای کن</item>
+        <item>دانشگاه تربیت مدرس</item>
+        <item>توحید</item>
+        <item>شادمان</item>
+        <item>شهید نواب</item>
+        <item>میدان حضرت ولی عصر</item>
+        <item>تئاتر شهر</item>
+        <item>شهید بهشتی</item>
+        <item>تجریش</item>
+        <item>شهدای هفتم تیر</item>
+        <item>دروازه شمیران</item>
+        <item>قائم</item>
+        <item>فرهنگسرا</item>
+        <item>امام حسین</item>
+        <item>میدان شهدا</item>
+        <item>شهید کلاهدوز</item>
+        <item>امام خمینی</item>
+        <item>مهدیه</item>
+        <item>میدان محمدیه</item>
+        <item>راه آهن</item>
+        <item>آزادگان</item>
+        <item>فرودگاه امام خمینی</item>
+        <item>کهریزک</item>
+        <item>شاهد</item>
+        <item>دولت آباد</item>
+        <item>ورزشگاه تختی</item>
+        <item>شهدای هفده شهریور</item>
+        <item>دروازه دولت</item>
+    </string-array>
+</resources>
