@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".change_design"
+    android:background="@color/colorPrimary">
+
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button"
+        android:fontFamily="@raw/font"
+        android:text="انتخاب ماتریس"
+        android:textColor="#42a1ef"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/back2" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@raw/font"
+        android:text="انتخاب نقشه"
+        android:textColor="#42a1ef"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/before"
+        android:layout_width="149dp"
+        android:layout_height="198dp"
+        android:layout_alignTop="@+id/after"
+        android:layout_marginLeft="30dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/after"
+        android:layout_width="149dp"
+        android:layout_height="198dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="115dp"
+        android:layout_marginEnd="30dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/before"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="73dp"
+        android:fontFamily="@raw/font"
+        android:text="نقشه اصلی"
+        android:textColor="@color/colorPrimaryD"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_marginEnd="61dp"
+        android:text="نقشه اصلاح شده"
+        android:textColor="@color/colorPrimaryD"
+        android:fontFamily="@raw/font"
+        android:textSize="16dp"/>
+
+    <ImageView
+        android:id="@+id/preview"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_above="@+id/logo"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button2"
+        android:fontFamily="@raw/font"
+        android:text="اصـــلاح نقشه"
+        android:textColor="#42a1ef"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/preview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="نقشه اصلاح شده"
+        android:textColor="@color/colorPrimaryD"
+        android:fontFamily="@raw/font"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
